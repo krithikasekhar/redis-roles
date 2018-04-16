@@ -48,10 +48,5 @@
     regexp: '^protected-mode yes'
     replace: 'protected-mode no'
 
-# - name: ensure redis service is restarted
-#   service: 
-#     name: redis 
-#     state: restarted
-
 - name: Ensure Redis is started 
   shell: "redis-server /tmp/redis-stable/redis.conf &"
